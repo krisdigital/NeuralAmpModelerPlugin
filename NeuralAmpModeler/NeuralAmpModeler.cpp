@@ -688,7 +688,7 @@ std::string NeuralAmpModeler::_StageModel(const WDL_String& modelPath)
   WDL_String previousNAMPath = mNAMPath;
   try
   {
-    auto dspPath = std::filesystem::u8path(modelPath.Get());
+    auto dspPath = fs::u8path(modelPath.Get());
     std::unique_ptr<nam::DSP> model = nam::get_dsp(dspPath);
     std::unique_ptr<ResamplingNAM> temp = std::make_unique<ResamplingNAM>(std::move(model), GetSampleRate());
     temp->Reset(GetSampleRate(), GetBlockSize());
@@ -721,7 +721,7 @@ dsp::wav::LoadReturnCode NeuralAmpModeler::_StageIR(const WDL_String& irPath)
   dsp::wav::LoadReturnCode wavState = dsp::wav::LoadReturnCode::ERROR_OTHER;
   try
   {
-    auto irPathU8 = std::filesystem::u8path(irPath.Get());
+    auto irPathU8 = fs::u8path(irPath.Get());
     mStagedIR = std::make_unique<dsp::ImpulseResponse>(irPathU8.string().c_str(), sampleRate);
     wavState = mStagedIR->GetWavState();
   }

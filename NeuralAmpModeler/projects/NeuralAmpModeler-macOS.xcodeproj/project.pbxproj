@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -440,6 +440,10 @@
 		4FFBB93020863B0E00DDD0E7 /* fbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8158C1205D50EB00393585 /* fbuffer.cpp */; };
 		4FFBB93420863B0E00DDD0E7 /* coreiids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8158E0205D50EB00393585 /* coreiids.cpp */; };
 		4FFBB93520863B0E00DDD0E7 /* vstnoteexpressiontypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F81588E205D50EB00393585 /* vstnoteexpressiontypes.cpp */; };
+		8C4955122D15B73C0035DDBD /* filesystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C4955112D15B73B0035DDBD /* filesystem.hpp */; };
+		8C4955132D15B73C0035DDBD /* filesystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C4955112D15B73B0035DDBD /* filesystem.hpp */; };
+		8C4955162D15BBC40035DDBD /* filesystem_fallback.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C4955152D15BBC40035DDBD /* filesystem_fallback.hpp */; };
+		8C4955172D15BBC40035DDBD /* filesystem_fallback.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C4955152D15BBC40035DDBD /* filesystem_fallback.hpp */; };
 		AA341E1D2B9E5A530069C260 /* ToneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA341E1B2B9E5A530069C260 /* ToneStack.cpp */; };
 		AA341E1E2B9E5A530069C260 /* ToneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA341E1B2B9E5A530069C260 /* ToneStack.cpp */; };
 		AA341E1F2B9E5A530069C260 /* ToneStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA341E1B2B9E5A530069C260 /* ToneStack.cpp */; };
@@ -1024,6 +1028,8 @@
 		4FFBB94120863E9300DDD0E7 /* IPlugVST3_Parameter.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_Parameter.h; path = ../../iPlug2/IPlug/VST3/IPlugVST3_Parameter.h; sourceTree = "<group>"; tabWidth = 2; };
 		4FFF72B8214BB71400839091 /* main.rc */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.rc; path = ../resources/main.rc; sourceTree = "<group>"; };
 		52FBBED30D0CF143001C8B8A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		8C4955112D15B73B0035DDBD /* filesystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filesystem.hpp; sourceTree = "<group>"; };
+		8C4955152D15BBC40035DDBD /* filesystem_fallback.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = filesystem_fallback.hpp; sourceTree = "<group>"; };
 		AA341E1B2B9E5A530069C260 /* ToneStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ToneStack.cpp; path = ../ToneStack.cpp; sourceTree = "<group>"; };
 		AA341E1C2B9E5A530069C260 /* ToneStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToneStack.h; path = ../ToneStack.h; sourceTree = "<group>"; };
 		AA355E2C295B688F0061AA3D /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Colors.h; path = ../Colors.h; sourceTree = "<group>"; };
@@ -1111,6 +1117,7 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				8C4955142D15BB850035DDBD /* fallbacks */,
 				4F2FB1392A0047420027AB66 /* dsp */,
 				4F2FB1452A0047420027AB66 /* NAM */,
 				AA355E2C295B688F0061AA3D /* Colors.h */,
@@ -1973,6 +1980,15 @@
 			name = WDL;
 			sourceTree = "<group>";
 		};
+		8C4955142D15BB850035DDBD /* fallbacks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4955112D15B73B0035DDBD /* filesystem.hpp */,
+				8C4955152D15BBC40035DDBD /* filesystem_fallback.hpp */,
+			);
+			path = fallbacks;
+			sourceTree = "<group>";
+		};
 		AA7C85F12B439AC000B5FB3A /* ResamplingContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2027,7 +2043,9 @@
 				4F4856852773C3B5005BCF8E /* IPlugAUViewController.h in Headers */,
 				AA7C85FC2B439AC000B5FB3A /* _LanczosResampler.h in Headers */,
 				4F2FB17C2A0047430027AB66 /* ImpulseResponse.h in Headers */,
+				8C4955132D15B73C0035DDBD /* filesystem.hpp in Headers */,
 				4F2FB17B2A0047430027AB66 /* RecursiveLinearFilter.h in Headers */,
+				8C4955172D15BBC40035DDBD /* filesystem_fallback.hpp in Headers */,
 				AA341E282B9E5A530069C260 /* ToneStack.h in Headers */,
 				4F2FB1B12A0047430027AB66 /* activations.h in Headers */,
 				AA7C85FA2B439AC000B5FB3A /* ResamplingContainer.h in Headers */,
@@ -2047,6 +2065,7 @@
 				AA7C85FD2B439AC000B5FB3A /* wdltypes.h in Headers */,
 				4FC3EFF82086CE5700BD11FA /* optional.h in Headers */,
 				4FC3F0012086CE5700BD11FA /* uid.h in Headers */,
+				8C4955122D15B73C0035DDBD /* filesystem.hpp in Headers */,
 				4F03A5B620A4621100EBDFFB /* IGraphics_select.h in Headers */,
 				4F03A5AB20A4621100EBDFFB /* IGraphics_include_in_plug_hdr.h in Headers */,
 				AA7C85FB2B439AC000B5FB3A /* _LanczosResampler.h in Headers */,
@@ -2069,6 +2088,7 @@
 				4FC3EFFA2086CE5700BD11FA /* parameterchanges.h in Headers */,
 				4F03A5B320A4621100EBDFFB /* IGraphics_include_in_plug_src.h in Headers */,
 				4FC3EFFC2086CE5700BD11FA /* plugprovider.h in Headers */,
+				8C4955162D15BBC40035DDBD /* filesystem_fallback.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2282,8 +2302,13 @@
 			attributes = {
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					4F20EEC8132C69FE0030E34C = {
+						DevelopmentTeam = 4ALFCYUZ64;
+						ProvisioningStyle = Automatic;
+					};
 					4F39075F2013EBA300DDA490 = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 686EDA2T8T;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
@@ -2293,10 +2318,26 @@
 							};
 						};
 					};
+					4F3AE17812C0E5E2001FD7A4 = {
+						DevelopmentTeam = 4ALFCYUZ64;
+						ProvisioningStyle = Automatic;
+					};
+					4F3EE1BA231438D000004786 = {
+						DevelopmentTeam = 686EDA2T8T;
+					};
 					4F78BE0122E73D0800AD537E = {
 						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = 4ALFCYUZ64;
+						ProvisioningStyle = Automatic;
 					};
 					4F78DAF113B643600032E0F3 = {
+						DevelopmentTeam = 686EDA2T8T;
+					};
+					4F9828AA140A9EB700F3FCC1 = {
+						DevelopmentTeam = 4ALFCYUZ64;
+						ProvisioningStyle = Automatic;
+					};
+					4FB600121567CB0A0020189A = {
 						DevelopmentTeam = 686EDA2T8T;
 					};
 					4FC3EFC32086C0A600BD11FA = {
@@ -2304,6 +2345,8 @@
 						DevelopmentTeam = 686EDA2T8T;
 					};
 					4FD16A0813B63081001D0217 = {
+						DevelopmentTeam = 4ALFCYUZ64;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
@@ -2312,6 +2355,9 @@
 								enabled = 1;
 							};
 						};
+					};
+					4FFBB8F820863B0E00DDD0E7 = {
+						DevelopmentTeam = 686EDA2T8T;
 					};
 					B87FD1E62351C6F900CF7307 = {
 						DevelopmentTeam = 686EDA2T8T;
@@ -2552,7 +2598,6 @@
 		};
 		4FBCC1B41FD5AEB700EFE550 /* Run Script - prepare_resources-mac.py */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2598,7 +2643,6 @@
 		};
 		B87FD1EE2351C71300CF7307 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -3297,9 +3341,11 @@
 		4F20EF30132C69FE0030E34C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST2_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3311,6 +3357,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenAtkinson.vst.${BINARY_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-main";
 				WRAPPER_EXTENSION = vst;
@@ -3324,7 +3371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST2_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3346,9 +3393,11 @@
 		4F20EF32132C69FE0030E34C /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST2_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3360,6 +3409,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenAtkinson.vst.${BINARY_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-main";
 				WRAPPER_EXTENSION = vst;
@@ -3394,11 +3444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../iPlug2/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../iPlug2/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.5.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -3432,7 +3478,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_EXTENSION = "";
@@ -3442,11 +3488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../iPlug2/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../iPlug2/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.5.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3488,11 +3530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../iPlug2/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../iPlug2/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 0.5.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3512,7 +3550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 686EDA2T8T;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(AU_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3546,7 +3584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(AU_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3580,7 +3618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 686EDA2T8T;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(AU_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3623,10 +3661,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -3647,7 +3682,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3657,10 +3692,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -3689,10 +3721,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -3723,7 +3752,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 686EDA2T8T;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3742,10 +3771,7 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -3783,7 +3809,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3804,10 +3830,7 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -3845,7 +3868,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 686EDA2T8T;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3866,10 +3889,7 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/NeuralAmpModeler-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -3922,10 +3942,13 @@
 		4F9828DD140A9EB700F3FCC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = 77BKRC84G3;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 4ALFCYUZ64;
 				DSTROOT = "$(VST3_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3938,9 +3961,10 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-VST3-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 0.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenAtkinson.vst3.${BINARY_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = vst3;
 			};
@@ -3949,11 +3973,12 @@
 		4F9828DE140A9EB700F3FCC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST3_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3966,7 +3991,7 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-VST3-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 0.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenAtkinson.vst3.${BINARY_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3978,9 +4003,12 @@
 		4F9828DF140A9EB700F3FCC1 /* Tracer */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.5.7;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST3_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",
@@ -3993,9 +4021,10 @@
 					"$(VST3_SDK)",
 				);
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-VST3-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 0.5.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StevenAtkinson.vst3.${BINARY_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = vst3;
 			};
@@ -4082,7 +4111,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(AAX_PATH)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $IPLUG_PATH/IPlugOBJCPrefix.pch;
@@ -4331,7 +4360,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4341,10 +4370,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -4366,7 +4392,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4376,10 +4402,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -4401,7 +4424,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(APP_PATH)";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4411,10 +4434,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/NeuralAmpModeler-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
@@ -4457,7 +4477,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 77BKRC84G3;
+				DEVELOPMENT_TEAM = 4ALFCYUZ64;
 				DSTROOT = "$(VST3_PATH)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(EXTRA_PLUGIN_DEFS)",

@@ -12,6 +12,8 @@
 
 #include "IPlug_include_in_plug_hdr.h"
 #include "ISender.h"
+#include "filesystem_fallback.hpp"
+
 
 
 const int kNumPresets = 1;
